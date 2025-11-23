@@ -1,98 +1,112 @@
-🚌 Travel App – Sistem Pemesanan Tiket Travel
+# **Travel App – Sistem Pemesanan Tiket Travel**
 
-Aplikasi pemesanan tiket travel berbasis Laravel 10 dengan dua role utama: Admin dan Penumpang. Mendukung pengelolaan jadwal travel, pemesanan tiket, pembayaran, hingga laporan.
+Aplikasi pemesanan tiket travel berbasis **Laravel 12** dengan dua role utama: **Admin** dan **Penumpang**.
+Mendukung pengelolaan jadwal travel, pemesanan tiket, pembayaran, hingga laporan.
 
-✨ Fitur Utama
-👥 Guest
+---
 
-Landing page informasi travel
+## ✨ **Fitur Utama**
 
-Registrasi & login penumpang
+### 👥 **Guest**
 
-🧳 Penumpang
+* Landing page informasi travel
+* Registrasi & login penumpang
 
-Dashboard penumpang
+### 🧳 **Penumpang**
 
-Lihat jadwal travel tersedia
+* Dashboard penumpang
+* Lihat jadwal travel tersedia
+* Pemesanan tiket + validasi kuota
+* Riwayat pemesanan
+* Upload bukti pembayaran
+* Cetak invoice
 
-Pemesanan tiket + validasi kouta
+### 🧑‍💼 **Admin**
 
-Riwayat pemesanan
+* Dashboard admin
+* CRUD Jadwal Travel
+* Laporan penumpang per jadwal
+* Manajemen data penumpang
 
-Upload bukti pembayaran
+---
 
-Cetak invoice
+## 🛠 **Teknologi**
 
-🧑‍💼 Admin
+* **Backend:** Laravel 12, Eloquent ORM
+* **Frontend:** Blade, Bootstrap 4, AdminLTE 3
+* **Database:** MySQL
+* **Authentication:** Laravel UI
 
-Dashboard admin
+---
 
-CRUD Jadwal Travel
+## 🧑‍💻 **Instalasi & Setup**
 
-Laporan penumpang per jadwal
+### **1. Clone Repository**
 
-Manajemen data penumpang
-
-🛠 Teknologi
-
-Backend: Laravel 12, Eloquent ORM
-
-Frontend: Blade, Bootstrap 4, AdminLTE 3
-
-Database: MySQL
-
-Auth: Laravel UI
-
-🧑‍💻 Instalasi & Setup
-Clone Repositori
+```bash
 git clone https://github.com/abdulrouff10/travel.git
 cd travel
+```
 
-Install Dependency
+### **2. Install Dependency**
+
+```bash
 composer install
+```
 
-Konfigurasi Environment
+### **3. Konfigurasi Environment**
+
+```bash
 cp .env.example .env
 php artisan key:generate
+```
 
-Setting Database
+### **4. Setting Database**
+
+Edit file `.env`:
+
+```
 DB_DATABASE=travel
 DB_USERNAME=root
 DB_PASSWORD=
+```
 
-jalankan Data Seeder
+### **5. Migrasi & Seeder**
+
+```bash
 php artisan migrate --seed
+```
 
-Jalankan Server
+### **6. Jalankan Server**
+
+```bash
 php artisan serve
+```
 
-🔑 Akun Default (Seeder)
+---
 
-Admin
-Email: admin@gmail.com
-Password: admin123
+## 🔑 **Akun Default (Seeder)**
 
-Database (Opsional)
-jika ingin import database
-travel.sql
+| Role  | Email                                     | Password |
+| ----- | ----------------------------------------- | -------- |
+| Admin | [admin@gmail.com](mailto:admin@gmail.com) | admin123 |
 
-📖 Cara Penggunaan
-Penumpang
+---
 
-Registrasi & login
+## 📖 **Cara Penggunaan**
 
-Lihat jadwal → pesan tiket
+### **Penumpang**
 
-Upload bukti pembayaran
+1. Registrasi & login
+2. Lihat jadwal → pesan tiket
+3. Upload bukti pembayaran
+4. Cetak invoice
 
-Cetak invoice
+### **Admin**
 
-Admin
+1. Login sebagai admin
+2. Kelola jadwal (CRUD)
+3. Lihat laporan
+4. Kelola data penumpang
 
-Login sebagai admin
-
-Kelola jadwal (CRUD)
-
-Lihat laporan
-
-Kelola data penumpang
+---
